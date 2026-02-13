@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="home-conntainer" class="home-container">
+    <header>
+        <div class="logo"><img src="CG LOGO.jpeg" height="100px" width="100px"></div>
+        <a href="index.html" class="ty">portfolio</a>
+    <nav>
+        <ul class="link">
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skl">skills</a></li>
+        <li><a href="#project">projects</a></li>
+        </ul>
+    </nav>
+    <a href="#contact-container"><button>call us</button></a>
+    </header>
+    <section id="home" class="home">
+    <div class="container">
+        <div class="d1">hello! i'm</div>
+        <div class="d2">Mahalakshmi AR</div>
+        <div class="d3">To upply my ui/ux skills in designing intuitive interfaces and seliver meaningful digital experiences for users.</div>
+        <div class="d4"><a href="Maha Lakshmi.pdf" download><font color="black">download cv</font></a></div>
+        <div class="d5"><a href>to explore my project</a></div>
+        <div class="d6"><img src="image.avif" height="400px" width="400px"></div>
+        <div class="d7"></div>
+    </div>
+    </section>
+    <section id="about" class="about">
+    <div class="container2">
+        <div class="banner">
+        <div class="photo"><img src="hearlap.avif" height="300px" width="300px"></div>
+        <div class="aboutme"><p id="jusp"></p>&nbsp;&nbsp;aboutme<br><font size="5x">&nbsp;&nbsp;ui/ux designer</font><br><p>&nbsp;&nbsp;hi i'm Mahalakshmi-a ui/ux designer.<br>&nbsp;&nbsp;i design clean, intuitive, and user-friendly digital experiences.<br>&nbsp;skilled in wireframing, prototyping, and front-end basics to &nbsp;&nbsp;bring ideas to life.</p></div>
+        </div>
+    </div>
+    </section>
+    <section id="skl" class="skl">
+    <div class="container4">skills
+    <div class="skills">
+        <div class="flex-item box uiux"><i class="fa-brands fa-html5" class="font-icon hc"></i><br>html/css<br><br>
+        <div class="prog">
+            <div class="prog-fill html"></div>
+        </div><br>
+        <p class="para">responsive layouts & basic animations.</p>
+        </div>
+        <div class="flex-item box ts"><i class="fa-brands fa-square-figma" class="font-icon fi"></i><br>figma<br><br>
+        <div class="prog">
+            <div class="prog-fill figma"></div>
+        </div><br>
+        <p class="para">UI design, wireframing & prototyping.</p>
+        </div>
+        <div class="flex-item box fe"><i class="fa-brands fa-wordpress" class="font-icon wp"></i><br>wordPress<br><br>
+        <div class="prog">
+            <div class="prog-fill wp"></div>
+        </div><br>
+        <p class="para">custom pages, plugins & responsive design.</p>
+    </div>
+    </div>
+    </div>
+    </section>
+    <section id="project" class="project">
+    <div class="container3">projects<br>
+        <div class="inline">
+        <div class="flex-item icprot"><img src="modprot.jpg" height="350px" width="350px"></div>
+        <div class="flex-item icdisc"><h2>Portfolio Website</h2><h4>a clean and modern personal portfolio designed to showcase my UI/UX skills, projects, and design approach with smooth interactions and responsive layouts.</h4><h5>tools:<br>HTML, CSS, JavaScript</h5></div>
+        <div class="flex-item icfidi"><h2>Medicine Delivery App</h2><h4>a mobile app UI designed for seamless medicine ordering, focusing on simple navigation, clear product flow, and an intuitive user experience from search to checkout.</h4><h5>tools:<br>figma, wireframing, prototyping</h5></div>
+        <div class="flex-item icfig"><img src="medpho.jpg" height="350px" width="350px"></div>
+        <div class="flex-item icword"><img src="weblap.jpg" height="350px" width="350px"></div>
+        <div class="flex-item icwodi"><h2>Pet selling Website</h2><h4>a user-friendly pet selling website designed to highlight pet listings and adoption details with visually appealing layouts and easy navigation using wordpress and elementor.</h4><h5>tools:<br>wordpress, elementor, plugins</h5></div>
+        </div>
+    </div>
+    </section>
+    </section>
+    <section id="contact-container" class="contact-container">
+    <div class="container-form">
+    <h1 id="d">For Contact Me</h1>
+    <form class="ctc-form" id="ctcform">
+    <label for="name">Name:</label>
+    <input type="text" name="name" placeholder="Enter Your Name" id="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="Enter Your Email" id="email"><br><br>
+    <label for="message">Message:</label>
+    <textarea name="message" placeholder="Enter your Message" rows="5" id="message"></textarea><br><br>
+    <button type="submit">Submit</button>
+    <p class="error" id="errormsg"></p>
+    <p class="success" id="sucsmsg"></p>
+    </form>
+    </div>
+    </section>
+    <script>
+        const form=document.getElementById("ctcform");
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+            const name=document.getElementById("name").value.trim();
+            const email=document.getElementById("email").value.trim();
+            const message=document.getElementById("message").value.trim();
+
+            if(name==="" || email==="" || message===""){
+                alert("Please Fill all the Fields!");
+            }
+            else if(!email.includes("@") || !email.includes(".")){
+                alert("Please enter a valid email address!");
+            }
+            else{
+                alert("Message Sent Successfully!");
+                form.reset();
+            }
+        });
+    </script>  
+</body>
+</html>
